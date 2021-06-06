@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
 
 Vue.use(VueRouter)
 
@@ -35,7 +37,7 @@ router.beforeResolve((to, from, next) => {
   next()
 })
 
-router.afterEach((to, from) => {
+router.afterEach(() => {
   // Complete the animation of the route progress bar.
   NProgress.done()
 })
