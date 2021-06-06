@@ -4,6 +4,10 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+// axios for rest API calls
+import axios from 'axios'
+Vue.prototype.$http = axios
+
 new Vue({
   router,
   render: h => h(App)
